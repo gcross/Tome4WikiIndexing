@@ -1,4 +1,10 @@
-# This script is placed in the public domain.  It is hosted at https://github.com/gcross/Tome4WikiIndexing.
+#!/usr/bin/python
+
+# ============================================================================== 
+# This program takes two arguments: the page to link to, and the kind of thing
+# being linked.  It then takes as standard input a list of topics, one on each
+# line.  The output is a list of generated links.
+# ============================================================================== 
 
 # Needed to make the script work with both Python 2.7 and 3.2
 from __future__ import print_function
