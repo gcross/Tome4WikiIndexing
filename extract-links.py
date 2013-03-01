@@ -38,4 +38,4 @@ if input_is_terminal and output_is_terminal:
 # so that it is indented.
 with output_file:
     for index_element in index_elements:
-        print(":"+index_element,file=output_file)
+        print(index_element,file=output_file)

@@ -36,8 +36,10 @@ for line in fileinput.input(files=(input_filename,),openhook=lambda input_filena
     if index is not None:
         if line[:1] != ':':
             continue
+        if line[:1] == ':':
+            line = line[1:]
         try:
-            value, key = line[3:-2].split('|')
+            value, key = line[2:-2].split('|')
         except ValueError:
             print('Error at line {}: invalid syntax'.format(fileinput.filelineno()))
             sys.exit(-1)
