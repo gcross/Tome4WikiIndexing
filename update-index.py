@@ -70,5 +70,5 @@ with open(output_filename,mode='w') if output_filename is not None else sys.stdo
     for key, value in sorted(index.items()):
         if key[0] != last_letter:
             last_letter = key[0]
-            print("=={}==".format(key[0]))
+            print("=={}==".format(key[0]),file=f)
         print(":[[{}|{}]]".format(value,key),file=f)
