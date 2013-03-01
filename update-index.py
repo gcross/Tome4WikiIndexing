@@ -1,18 +1,5 @@
 #!/usr/bin/python
 
-# ============================================================================== 
-# The following script takes as input the source code for the old version of 
-# the index followed by a list of links and its sorts all of the index links, 
-# automatically creating or deleting letter sections. The link extractor 
-# automatically puts the links in the correct format for input to this program, 
-# so the idea is that you take a page, extract all of its links, do some extra 
-# formatting of these links (such as adding "(class)" to classes), removing 
-# links that should appear in the index (such as those to the the main page), 
-# and then construct the new index by running the following script, copying and 
-# pasting the old index source code, copying and pasting the new links that you 
-# just formatted, pressing Control-D once or twice to let the script know you 
-# ============================================================================== 
-
 # This script is placed in the public domain.  It is hosted at https://github.com/gcross/Tome4WikiIndexing.
 
 # Needed to make the script work with both Python 2.7 and 3.2

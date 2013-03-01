@@ -1,10 +1,5 @@
 #!/usr/bin/python
 
-# ============================================================================== 
-# This script takes as input the text of a page and prints as output all of the
-# links in the page.
-# ============================================================================== 
-
 # Needed to make the script work with both Python 2.7 and 3.2
 from __future__ import print_function
 

@@ -1,16 +1,5 @@
 #!/usr/bin/python
 
-# ============================================================================== 
-# This script takes advantage of the fact that most of the talent pages have the
-# name of the talent at the beginning of the line (more precisely just after the
-# bullet, but the bullet is dropped when copying and pasting the raw text)
-# followed by a semicolon.  Run it with the name of the page to be linked as the
-# first argument and copy and paste the page into the program after you run it
-# (followed by typing Control-D once or twice).  Note that occasionally there
-# will be other words with this format so you need to scan the resulting list
-# for mistakes before using it.
-# ============================================================================== 
-
 # Needed to make the script work with both Python 2.7 and 3.2
 from __future__ import print_function
 
