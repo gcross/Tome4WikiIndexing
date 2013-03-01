@@ -41,6 +41,8 @@ for line in fileinput.input(files=(input_filename,),openhook=lambda input_filena
         except ValueError:
             print('Error at line {}: invalid syntax'.format(fileinput.filelineno()))
             sys.exit(-1)
+        value = value.replace(' ','-')
+        value = value.replace('_','-')
         if key in index:
             if index[key] != value:
                 print('Error at line {}: key "{}" has multiple values -- specifically, at least "{}" and "{}".'.format(fileinput.filelineno(),key,index[key],value),file=sys.stderr)
