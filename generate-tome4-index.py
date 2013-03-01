@@ -8,7 +8,7 @@ except IndexError:
     input_file = sys.stdin
 
 try:
-    output_file = open(sys.argv[2],mode='rt')
+    output_file = open(sys.argv[2],mode='wt')
 except IndexError:
     output_file = sys.stdout
 
