@@ -20,7 +20,9 @@ with input_file:
 
 if input_file is sys.stdin and output_file is sys.stdout:
     print()
-    print()
+    print('='*80)
+    print(' '*32+'  BEGIN OUTPUT  '+' '*32)
+    print('='*80)
 
 with output_file:
     for index_element in index_elements:

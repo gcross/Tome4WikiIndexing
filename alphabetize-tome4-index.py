@@ -40,6 +40,12 @@ for line in fileinput.input(files=(input_filename,),openhook=lambda input_filena
             index[key] = value
         letters.add(key[0])
 
+if input_filename is output_filename:
+    print()
+    print('='*80)
+    print(' '*32+'  BEGIN OUTPUT  '+' '*32)
+    print('='*80)
+
 with open(output_filename,mode='w') if output_filename is not None else sys.stdout as f:
     for line in prelude:
         print(line,file=f)
