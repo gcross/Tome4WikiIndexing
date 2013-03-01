@@ -45,12 +45,7 @@ for line in fileinput.input(files=(input_filename,),openhook=lambda input_filena
             sys.exit(-1)
         value = value.replace(' ','-')
         value = value.replace('_','-')
-        if key in index:
-            if index[key] != value:
-                print('Error at line {}: key "{}" has multiple values -- specifically, at least "{}" and "{}".'.format(fileinput.filelineno(),key,index[key],value),file=sys.stderr)
-                sys.exit(-1)
-        else:
-            index[key] = value
+        index[key] = value
         letters.add(key[0])
 
 # If the user is copying and pasting directly into standard input and
