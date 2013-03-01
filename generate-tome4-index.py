@@ -1,3 +1,5 @@
+# This script is placed in the public domain.  It is hosted at https://github.com/gcross/Tome4WikiIndexing.
+
 # Needed to make the script work with both Python 2.7 and 3.2
 from __future__ import print_function
 
