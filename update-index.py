@@ -7,13 +7,17 @@ import sys
 
 try:
     input_filename = sys.argv[1]
+    input_is_terminal = False
 except IndexError:
     input_filename = None
+    input_is_terminal = sys.stdin.isatty()
 
 try:
     output_filename = sys.argv[2]
+    output_is_terminal = False
 except IndexError:
     output_filename = None
+    output_is_terminal = sys.stdout.isatty()
 
 prelude = []
 index = None
@@ -48,7 +52,7 @@ for line in fileinput.input(files=(input_filename,),openhook=lambda input_filena
 # If the user is copying and pasting directly into standard input and
 # expecting the output to be written to the screen, then we insert a
 # banner to make it easy to see where the output begins.
-if input_filename is output_filename:
+if input_is_terminal and output_is_terminal:
     print()
     print('='*80)
     print(' '*32+'  BEGIN OUTPUT  '+' '*32)
