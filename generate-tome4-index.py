@@ -24,4 +24,4 @@ if input_file is sys.stdin and output_file is sys.stdout:
 
 with output_file:
     for index_element in index_elements:
-        print(":",index_element,file=output_file)
+        print(":"+index_element,file=output_file)
