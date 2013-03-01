@@ -1,3 +1,4 @@
+# Needed to make the script work with both Python 2.7 and 3.2
 from __future__ import print_function
 
 import sys
@@ -12,18 +13,25 @@ try:
 except IndexError:
     output_file = sys.stdout
 
+# The following regular expression matches on links of the form [[X|Y]]
 import re
 index_element_matcher = re.compile("\[\[[^|]*\|[^|]*\]\]")
 
+# Use the regular expression to match all of the links
 with input_file:
     index_elements = index_element_matcher.findall(input_file.read())
 
+# If the user is copying and pasting directly into standard input and
+# expecting the output to be written to the screen, then we insert a
+# banner to make it easy to see where the output begins.
 if input_file is sys.stdin and output_file is sys.stdout:
     print()
     print('='*80)
     print(' '*32+'  BEGIN OUTPUT  '+' '*32)
     print('='*80)
 
+# The only formatting we perform is to add a colon before each link
+# so that it is indented.
 with output_file:
     for index_element in index_elements:
         print(":"+index_element,file=output_file)
