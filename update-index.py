@@ -34,7 +34,7 @@ for line in fileinput.input(files=(input_filename,),openhook=lambda input_filena
         else:
             prelude.append(line)
     if index is not None:
-        if line[:1] != ':':
+        if line[:1] in ('','='):
             continue
         if line[:1] == ':':
             line = line[1:]
